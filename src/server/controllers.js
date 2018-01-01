@@ -1,6 +1,6 @@
 module.exports = {
-  getHome: function (req, res) {
-    res.send(`this is ${req.params.name} hello from get home!`);
+  getAllProjects: function (req, res) {
+    res.send('this is hello from getAllProjects!');
   },
   postHome: function (req, res) {
     res.send('hello from post home!');

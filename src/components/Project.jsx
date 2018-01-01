@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import TaskEntry from './TaskEntry';
+import TaskEntry from './TaskEntry.jsx';
+import axiosHelper from './axiosHelper/projectHelper.js';
 
 class Project extends Component {
   constructor (props) {
@@ -9,6 +10,19 @@ class Project extends Component {
     this.state = {
       projectName: 'Project name here'
     }
+  };
+
+  componentDidMount () {
+    axiosHelper.getAllTask()
+    .then((resp) => {
+      this.setState({
+        projectName: resp.data
+      });
+      console.log(resp.data)
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   };
 
 

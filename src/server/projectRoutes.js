@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const controllers = require('./controllers.js');
 
-router.get('/:name', controllers.getHome);
+router.get('/', controllers.getAllProjects);
 
 router.post('/', controllers.postHome)
 
