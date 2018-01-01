@@ -1,12 +1,15 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var projectRoutes = require('./projectRoutes.js');
 
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
+
+app.use('/projects', projectRoutes);
 
 app.listen(8080, (err) => {
   if (err) {

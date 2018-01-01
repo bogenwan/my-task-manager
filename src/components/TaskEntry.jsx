@@ -8,9 +8,11 @@ class TaskEntry extends Component {
 
   render () {
     return (
-      <div className="task-entry">
-        In Task
-        <p>{this.props.eachTask}</p>
+      <div>
+        <div className="task-entry">
+          <span className="task-span">{this.props.eachTask}Each Task</span>
+        </div>
+        <button className="complete-button" type="button">Completed</button>
       </div>
     )
   };

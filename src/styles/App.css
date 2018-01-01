@@ -34,3 +34,15 @@
   font-size: 25px;
 }
 
+.task-span {
+  vertical-align: middle;
+}
+
+.complete-button {
+  height: 45px;
+  border-radius: 10px;
+  background: linear-gradient(to top, #008ce3, #FFFFFF 100%);
+  border: 1px solid grey;
+  font-size: 25px;
+}
+

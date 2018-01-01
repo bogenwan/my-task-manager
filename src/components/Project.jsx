@@ -11,9 +11,6 @@ class Project extends Component {
     }
   };
 
-  componentDidMount () {
-
-  };
 
   render () {
     return (
