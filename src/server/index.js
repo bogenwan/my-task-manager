@@ -4,6 +4,12 @@ var bodyParser = require('body-parser');
 var projectRoutes = require('./projectRoutes.js');
 var cors = require('cors');
 
+var session = require('express-session');
+var errorhandler = require('errorhandler');
+var passport = require('passport');
+var util = require('util');
+var AsanaStrategy = require('passport-asana').Strategy;;
+
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
